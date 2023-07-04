@@ -14,6 +14,8 @@ body{
     font-family: 'gg sans SemiBold', sans-serif
 }
 
+
+
 a{
     text-decoration: none;
 }
@@ -178,7 +180,6 @@ header>div>.login>a{
 /* #region Main */
 
 .jumbotron {    
-    background-color: #3161e0;
     height: 50vh; 
     padding: 2rem 0;
     background: url(../img/jumbo.png);
@@ -266,7 +267,7 @@ font-size: 1.3rem;
 .wave{
     background-image: url(../img/wave.svg);
     background-repeat: repeat;
-    opacity: 0.1;
+    opacity: 0.08;
     height: 100px;
 }
 .wave.rotate{
@@ -290,13 +291,18 @@ footer > .top, footer > .bottom {
     height: 2rem;
 }
 
+.socials>i{
+    margin-top: 1rem;
+}
+
 .d-inblock{
     display: inline-block;
+    margin-bottom: 1rem;
 }
 
 span{
     display: block;
-    margin-top: 1rem;
+
 }
 .singin{
     border-radius: 40px;
