@@ -17,10 +17,16 @@ section {
     padding: 2rem 0;
 }
 
+footer{
+    color: #fff;
+}
+
 :root{
     --bg-header: #3161e0 ;
     --bg-button-white: #ffffff ;
     --bg-button-black: #23272a ;
+    --gb-button-last: #8ea1e1 ;
+    --bg-footer: #23272a ;
 }
 
 
@@ -162,10 +168,7 @@ header {
     padding: 2rem 0;
     background: url(../img/jumbo.png);
     background-size: cover, contain;
- 
-    
-
-   
+    background-position: center;
 }
 .jumbo-text{
     color: #fff;
@@ -213,15 +216,59 @@ font-size: 1.3rem;
     font-weight: 800;
     margin-bottom: 2rem;
 }
+
+
+ .huge{
+    flex-direction: column;
+}
+.huge>h1{
+    margin: auto;
+    font-size: 2rem;
+}
+
+.huge>p{
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.star{
+    text-align: center;
+    background-image: url(../img/stars.svg);
+    background-size: cover,;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.huge>a{
+    border-radius: 40px;
+    font-size: 14px;
+    padding: 12px 26px;
+    text-decoration: none;
+    background-color: var(--gb-button-last);
+    text-align: center;
+    width:20%;
+    margin: 2rem auto;
+    
+
+}
 /* #endregion Main */
 
 
 /* #region Footer */
 footer {
-  background-color: darkblue;
+  background-color: var(--bg-footer);
 }
 footer > .top, footer > .bottom {
   padding: 1rem 0;
 }
 
+.bandiera{
+    margin-top: 1rem;
+    width: 3rem;
+    height: 2rem;
+}
+
+.d-inblock{
+    display: inline-block;
+}
 /* #endregion Footer */
