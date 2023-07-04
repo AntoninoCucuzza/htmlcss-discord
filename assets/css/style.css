@@ -13,12 +13,18 @@ body{
     font-family: 'gg sans Medium', sans-serif;
     font-family: 'gg sans SemiBold', sans-serif
 }
+
+a{
+    text-decoration: none;
+}
+
 section {
     padding: 2rem 0;
 }
 
 footer{
     color: #fff;
+    background-color: var(--bg-footer);
 }
 
 :root{
@@ -27,6 +33,9 @@ footer{
     --bg-button-black: #23272a ;
     --gb-button-last: #8ea1e1 ;
     --bg-footer: #23272a ;
+    --footer-text-color:#7289da;
+    --footer-text-color-w:#fff;
+    --footer-separatore:#323a4c;
 }
 
 
@@ -67,18 +76,25 @@ footer{
 .d-flex {
   display: flex;
 }
+.purple{
+    background-color: var(--gb-button-last);
+}
 
-.container-sm
-{
+.container-sm{
   max-width: 800px;
   width: 60%;
   margin: auto;
-
 }
 .justify-content-between {
   justify-content: space-between;
 }
 
+.footer-text-color{
+    color: var(--footer-text-color);
+}
+.footer-text-color-w{
+    color: var(--footer-text-color-w);
+}
 /* Flex Grid */
 .container
 {
@@ -140,7 +156,7 @@ header {
 
 .menu>a{
     color: #fff;
-    text-decoration: none;
+
     padding: 1rem;
 }
 .menu>a:hover{
@@ -148,15 +164,14 @@ header {
     color: #fff;
 }
 
-.login>a{
+header>div>.login>a{
     border-radius: 40px;
     font-size: 14px;
     padding: 7px 16px;
-    text-decoration: none;
     color: black;
-    background-color:var(--bg-button-white);
-    
+    background-color:var(--bg-button-white); 
 }
+
 
 /* #endregion Header */
 
@@ -189,8 +204,6 @@ header {
     border-radius: 40px;
     font-size: 14px;
     padding: 12px 26px;
-    text-decoration: none;
-   
 }
 
 .jumbo-text>p{
@@ -217,10 +230,10 @@ font-size: 1.3rem;
     margin-bottom: 2rem;
 }
 
-
- .huge{
+.huge{
     flex-direction: column;
 }
+
 .huge>h1{
     margin: auto;
     font-size: 2rem;
@@ -243,24 +256,33 @@ font-size: 1.3rem;
     border-radius: 40px;
     font-size: 14px;
     padding: 12px 26px;
-    text-decoration: none;
     background-color: var(--gb-button-last);
     text-align: center;
     width:20%;
     margin: 2rem auto;
-    
-
+    color: #fff;
 }
+
+.wave{
+    background-image: url(../img/wave.svg);
+    background-repeat: repeat;
+    opacity: 0.1;
+    height: 100px;
+}
+.wave.rotate{
+    transform: rotate(180deg);
+}
+
+
 /* #endregion Main */
 
 
 /* #region Footer */
-footer {
-  background-color: var(--bg-footer);
-}
+
 footer > .top, footer > .bottom {
   padding: 1rem 0;
 }
+
 
 .bandiera{
     margin-top: 1rem;
@@ -271,4 +293,23 @@ footer > .top, footer > .bottom {
 .d-inblock{
     display: inline-block;
 }
+
+span{
+    display: block;
+    margin-top: 1rem;
+}
+.singin{
+    border-radius: 40px;
+    font-size: 14px;
+    padding: 7px 16px;
+    color: #fff;
+}
+
+.separatore{
+    background-color: var(--footer-separatore);
+    height: 2px;
+    width: 100%;
+    margin-top: 1rem;
+}
+
 /* #endregion Footer */
