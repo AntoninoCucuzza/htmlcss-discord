@@ -1,204 +1,179 @@
-/* #region common */
+/* #region Common */
 
-*{
+*
+{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-#header_top{
-    background-color: aquamarine;
+
+section {
+    padding: 2rem 0;
 }
 
-nav{
-    height: 100px;
-    background-color: blue;
-    max-width: 80%;
-    margin: 0 auto;
-
+:root{
+    --bg-header: #3161e0 ;
+    --bg-button-white: #ffffff ;
+    --bg-button-black: #23272a ;
 }
 
-section{
-    height: 50vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+/* #endregion Common */
+
+/* #region Debug */
+.debug .container
+{
+  background-color: rgb(255, 166, 0);
 }
 
-footer{
-    background-color: tomato;
-    height: 50vh;
-    display: flex;
-    justify-content: center;
-}
-/* #endregion common */
-
-
-/* #region debug */
-
-/* #region header */
-
-.small{
-    flex-grow: 30;
+.debug [class^='col-']
+{
+  height: 200px;
+  background-color: palegreen;
+  border: 1px dashed;
 }
 
-.huge{
-    flex-grow: 70;
+.debug .h-50
+{
+  height: 500px;
 }
 
-.center{
-    display: flex;
-    justify-content: center;
-    max-width: 80%;
-    margin: 0 auto;
+.debug .login,.debug .logo,.debug .menu
+{
+  border: 1px dashed;
 }
 
-.mimic{
-    height: 50px;
-    border: 3px solid black;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-
+.debug .container-sm
+{
+  background-color: palevioletred;
+  height: 100%;
 }
-#header_bot{
-    background-color: black;
-    height: 600px ;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+/* #endregion Debug */
+
+/* #region Utilities */
+
+.d-flex {
+  display: flex;
 }
 
-#placeholder{
-    width: 50%;
-    height: 60%;
-    background-color: aliceblue;
-   
+.container-sm
+{
+  max-width: 800px;
+  width: 60%;
+  margin: auto;
+
 }
-/* #end region header */
-
-
-/* #endregion debug */
-
-/* #region main */
-.odd{
-    background-color: gainsboro;
+.justify-content-between {
+  justify-content: space-between;
 }
 
-.even{
-    background-color: #fff;
+/* Flex Grid */
+.container
+{
+  max-width: 1170px;
+  width: 80%;
+  margin: auto;
 }
-.container{
-    background-color: greenyellow; 
-    height: 70%;
-    width: 80%;
-    max-width: 1170px;
-    margin: auto;
-    padding: 1rem 0;
+.row {
+  display: flex;
+  /* negative margin */
+}
+
+[class^='col-']
+{
+  padding: 0 1rem;
+}
+
+.col-3{
+  width: calc(100% / 12 * 3);
+}
+.col-4
+{
+  width: calc(100% / 12 * 4);
+}
+.col-8 {
+  width: calc(100% / 12 * 8);
+}
+
+
+/* Spacings */
+
+.py-3 {
+  padding: 0.75rem 0;
+}
+
+/* Colors */
+.bg_section {
+  background-color: #ededed;
+}
+
+/* #endregion Utility */
+
+/* #region Header */
+
+header {
+    background-color:var(--bg-header);
+
+}  
+.logo, .login {
+    width: 20%;
+}
+.menu {
+    width: 60%;
+    text-align: center;
+}
+.login {
+    text-align: end;
+}
+
+.menu>a{
+    color: #fff;
+    text-decoration: none;
+    padding: 1rem;
+}
+.menu>a:hover{
+   text-decoration: underline;
+    color: #fff;
+}
+
+.login>a{
+    border-radius: 40px;
+    font-size: 14px;
+    padding: 7px 16px;
+    text-decoration: none;
+    color: black;
+    background-color:var(--bg-button-white);
     
 }
 
-.row{
-    background-color: burlywood;
-    display: flex;
-    align-items: center;
-    height: 100%;
+/* #endregion Header */
 
-}
+/* #region Main */
 
-.col60{
-    background-color: aquamarine;
-    border: 1px solid black;
-    width: 60%;
-    height: 90%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem;
-}
-
-.col40{
-    background-color: aquamarine;
-    border: 1px solid black;
-    width: 40%;
-    height: 90%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem;
-}
-
-.card{
-    background-color: bisque;
-    min-width: 300px;
-    height: 80%;
-   
-}
-
-
-
-.containerone{
-    background-color: blue;
-    height: 90%;
-    width: 80%;
-    margin-bottom: 2rem;
-}
-
-
-
-/* #endregion main */
-
-/* #region footer */
-
-.footer-container{
-    background-color: aquamarine;
-    height: 90%;
-    width: 80%;
-    padding: 1rem 0;
-}
-
-.footer-row{
-    background-color: blueviolet;
-    height: 90%;
-    display: flex;
-    align-items: center;
-
-}
-.footer-huge-col{
-    background-color: cadetblue;
-    height: 90%;
-    width: 60%;
-    margin: 1rem;
-
-}
-.footer-col{
-    width: calc(100%/4);
-    background-color: #fff;
-    height: 90%;
-    margin: 1rem;
-}
-
-.footer-bot{
-    background-color: chartreuse;
-    width: 100%;
-    height: 50px;
-    display: flex;
-    justify-content: space-between;
-    margin-top: 1rem;
-
-}
-
-.footer-end{
+.jumbotron {    
     
-    background-color: black;
+    background-color: #3161e0;
+    height: 50vh; 
+    padding: 2rem 0;
+}
+.jumbo-text{
+    color: #fff;
+    text-align: center;
+}
+.bg-immage{
+    width: 100%;
     height: 100%;
-    width: 200px;
 }
 
+/* #endregion Main */
 
 
-/* #endregion footer */
+/* #region Footer */
+footer {
+  background-color: darkblue;
+}
+footer > .top, footer > .bottom {
+  padding: 1rem 0;
+}
 
-/* #region utilities */
-
-
-/* #endregion utilities */
+/* #endregion Footer */
